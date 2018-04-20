@@ -1,4 +1,3 @@
-from ejercicio5ClassPersona
 class Cancion (object):
 
     nombre=None
