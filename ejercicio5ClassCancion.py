@@ -12,5 +12,3 @@ class Cancion (object):
 
     def setlistaArtistas(self, artistaAIngresar):
         self.listaArtistas.append(artistaAIngresar)
-
-

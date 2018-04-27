@@ -1,11 +1,13 @@
 class Persona(object):
 
-    nombre = None
-    apellido = None
-    fechaNac = None
+    def __init__(self, nombre, apellido, fechaNac):
+
+        self.nombre = nombre
+        self.apellido = apellido
+        self.fechaNac = fechaNac
 
     def setnombre(self , nombrePersonaAIngresar):
-        self.nombre= nombrePersonaAIngresar
+        self.nombre = nombrePersonaAIngresar
 
     def setapellido(self, apellidoPersonaAIngresar):
         self.apellido = apellidoPersonaAIngresar
@@ -14,15 +16,8 @@ class Persona(object):
         self.fechaNac = fechaNacAIngresar
 
 
-class Autores(Persona):
-    nacionalidad = None
-
-    def setNacionalidad(self, nacionalidad):
-        self.nacionalidad = nacionalidad
 
 
 
-class Artista(Persona):
-    pass
 
 

@@ -1,7 +1,7 @@
 from ejercicio5ClassCancion import Cancion
 from ejercicio5ClassAlbum import Album
-from ejercicio5ClassPersona import Artista
-from ejercicio5ClassPersona import Autores
+from ejercicio5ClassArtista import Artista
+from ejercicio5ClassAutor import Autores
 import datetime
 
 BlackSabbath = Album()
@@ -31,9 +31,11 @@ Warning.setlistaAutores(Butler)
 Warning.setlistaArtistas(Tommy)
 BlackSabbath.setListaCaciones(Warning)
 BlackSabbath.setListaCaciones(Elpepo)
-pepe = BlackSabbath.getListaArtista(BlackSabbath)
+pepe = BlackSabbath.getListaArtista()
+
 for i in pepe:
     print(i.nombre)
+
 
 
 
