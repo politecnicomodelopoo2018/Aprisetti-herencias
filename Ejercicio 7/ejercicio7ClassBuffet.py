@@ -30,7 +30,7 @@ class Buffet (object):
     def erasePlatoDePedido(self, platoABorrar):
 
         for item in self.listaPedidos:
-            if platoABorrar in item.listaPlatosEnPedido:
+            if platoABorrar in item.l   istaPlatosEnPedido:
                 self.listaPedidos.remove(item)
         self.listaPlatosEnBuffet.remove(platoABorrar)
 
