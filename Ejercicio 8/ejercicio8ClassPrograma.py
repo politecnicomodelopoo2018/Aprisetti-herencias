@@ -1,14 +1,14 @@
 
 class Programa(object):
 
-    def __init__(self, nombre, operario, categoria):
+    def __init__(self, nombre = None, operario = None, categoria = None):
 
         self.nombre = nombre
         self.operario = operario
         self.categoria = categoria
 
-        listaBloques = []
-        listaConductores = []
+        self.listaBloques = []
+        self.listaConductores = []
 
 
     def setNombre(self, nombreAIngresar):
@@ -23,6 +23,20 @@ class Programa(object):
     def addBloque(self, bloqueAIngresar):
         self.listaBloques.append(bloqueAIngresar)
 
-    def addProductor(self, productorAIngresar):
-        self.listaProductores.append(productorAIngresar)
+    def addConductor(self, conductorAIngresar):
+        self.listaConductores.append(conductorAIngresar)
 
+    def checkHorario(self, bloque):
+        for item in self.listaBloques:
+            for check in bloque:
+                if check.dia == item.dia and check.horario == item.horario:
+                    return True
+        return False
+
+    def codificacion(self):
+        return ("%s|%s|%s|%s")%(self.__class__.__name__,self.nombre, self.operario.nombre, self.categoria)
+
+    def decodificacion(self, datos):
+        self.nombre = datos[1]
+        self.operario = datos[2]
+        self.categoria = datos[3]
